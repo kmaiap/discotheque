@@ -1,0 +1,12 @@
+{
+  "name": "Discotheque",
+  "short_name": "Discotheque",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#121317",
+  "theme_color": "#ff4a8d",
+  "description": "A Discoteca Pessoal (Discotheque) - Vinyl & Social Club",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}
+

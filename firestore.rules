@@ -1,0 +1,56 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Regras para a coleção de usuários
+    match /users/{userId} {
+      // Qualquer usuário autenticado pode ler perfis para buscar colaboradores
+      allow read: if request.auth != null;
+
+      // Usuário só pode criar ou atualizar seu próprio perfil
+      allow create, update: if request.auth != null && request.auth.uid == userId;
+      allow delete: if false;
+    }
+
+    // Regras para a coleção de playlists
+    match /playlists/{playlistId} {
+      // Funções auxiliares para legibilidade e conformidade com SOLID
+      function isAuthenticated() {
+        return request.auth != null;
+      }
+
+      function isOwner() {
+        return isAuthenticated() && resource.data.ownerId == request.auth.uid;
+      }
+
+      function isCollaborator() {
+        return isAuthenticated() && (request.auth.uid in resource.data.collaborators);
+      }
+
+      function isOwnerOrCollaborator() {
+        return isOwner() || isCollaborator();
+      }
+
+      // 1. Criação: Usuário autenticado define a si mesmo como ownerId
+      allow create: if isAuthenticated() && request.resource.data.ownerId == request.auth.uid;
+
+      // 2. Leitura: Apenas dono ou colaboradores
+      allow read: if isOwnerOrCollaborator();
+
+      // 3. Atualização:
+      // Dono pode atualizar qualquer campo (incluindo colaboradores e metadados)
+      // Colaboradores podem atualizar APENAS a lista de músicas (tracks)
+      allow update: if isOwner() || (
+        isCollaborator() &&
+        // Garante que o colaborador não altere o dono nem a lista de colaboradores
+        request.resource.data.ownerId == resource.data.ownerId &&
+        request.resource.data.collaborators == resource.data.collaborators &&
+        request.resource.data.createdAt == resource.data.createdAt
+      );
+
+      // 4. Exclusão: Exclusiva do Dono da playlist
+      allow delete: if isOwner();
+    }
+  }
+}
+

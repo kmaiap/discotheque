@@ -1,0 +1,40 @@
+name: discotheque
+description: "A Discoteca Pessoal (Discotheque) - App Colaborativo em Flutter com Firebase"
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase Core e Serviços
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  cloud_firestore: ^5.4.4
+
+  # Gerenciamento de Estado
+  provider: ^6.1.2
+
+  # Requisições HTTP e APIs de Música
+  http: ^1.2.2
+
+  # Tipografia e Estilização Neon/Grotesk
+  google_fonts: ^6.2.1
+
+  # Carregamento e Cache de Imagens de Capa
+  cached_network_image: ^3.4.1
+
+  # Utilitários de Data e Formatação
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+

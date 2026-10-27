@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Discotheque - Discoteca Pessoal &amp; Colaborativa</title>
+<!-- Google Fonts: Space Grotesk & Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-container": "#6201c5",
+            "error-container": "#93000a",
+            "background": "#121317",
+            "on-tertiary-container": "#002f33",
+            "on-tertiary": "#00363a",
+            "outline-variant": "#5c3f46",
+            "inverse-surface": "#e3e2e8",
+            "on-surface": "#e3e2e8",
+            "primary-fixed-dim": "#ffb1c4",
+            "tertiary-fixed-dim": "#00dbe9",
+            "on-primary": "#65002e",
+            "surface-container": "#1f1f24",
+            "on-error": "#690005",
+            "tertiary-fixed": "#7df4ff",
+            "inverse-primary": "#ba005b",
+            "on-tertiary-fixed-variant": "#004f54",
+            "on-primary-container": "#590028",
+            "error": "#ffb4ab",
+            "tertiary-container": "#00a0aa",
+            "primary-fixed": "#ffd9e1",
+            "surface-container-high": "#292a2e",
+            "on-primary-fixed": "#3f001a",
+            "on-secondary-fixed": "#270057",
+            "on-secondary-container": "#caa9ff",
+            "on-secondary-fixed-variant": "#5f00c0",
+            "on-secondary": "#42008a",
+            "surface-tint": "#ffb1c4",
+            "surface-container-low": "#1a1b20",
+            "surface-dim": "#121317",
+            "secondary": "#d6baff",
+            "tertiary": "#00dbe9",
+            "inverse-on-surface": "#2f3035",
+            "surface-container-lowest": "#0d0e12",
+            "surface-variant": "#343439",
+            "secondary-fixed-dim": "#d6baff",
+            "on-error-container": "#ffdad6",
+            "secondary-fixed": "#ecdcff",
+            "outline": "#ac878f",
+            "on-surface-variant": "#e5bcc5",
+            "surface-container-highest": "#343439",
+            "surface-bright": "#38393e",
+            "on-tertiary-fixed": "#002022",
+            "primary": "#ffb1c4",
+            "on-primary-fixed-variant": "#8f0044",
+            "primary-container": "#ff4a8d",
+            "surface": "#121317",
+            "on-background": "#e3e2e8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "margin": "2rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "gutter-mobile": "0.75rem"
+          },
+          "fontFamily": {
+            "headline-xl-mobile": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "display-hero": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "headline-xl": ["Space Grotesk"],
+            "body-md": ["Manrope"],
+            "body-lg": ["Manrope"],
+            "display-hero-mobile": ["Space Grotesk"],
+            "label-md": ["Space Grotesk"],
+            "body-sm": ["Manrope"],
+            "label-lg": ["Space Grotesk"],
+            "label-caps": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @keyframes vinyl-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .animate-spin-slow {
+      animation: vinyl-spin 4s linear infinite;
+    }
+
+    .paused-animation {
+      animation-play-state: paused !important;
+    }
+
+    /* Soundwave Equalizer Animation */
+    @keyframes eq-bounce-1 { 0%, 100% { height: 4px; } 50% { height: 16px; } }
+    @keyframes eq-bounce-2 { 0%, 100% { height: 14px; } 50% { height: 6px; } }
+    @keyframes eq-bounce-3 { 0%, 100% { height: 8px; } 50% { height: 18px; } }
+
+    .eq-bar-1 { animation: eq-bounce-1 0.8s ease-in-out infinite; }
+    .eq-bar-2 { animation: eq-bounce-2 0.7s ease-in-out infinite 0.2s; }
+    .eq-bar-3 { animation: eq-bounce-3 0.9s ease-in-out infinite 0.1s; }
+
+    /* Custom Scrollbar for Neon horizontal carousels */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Vinyl sheen overlay */
+    .vinyl-grooves {
+      background: radial-gradient(circle, transparent 28%, rgba(255, 255, 255, 0.05) 30%, transparent 32%, rgba(255, 255, 255, 0.05) 44%, transparent 46%, rgba(255, 255, 255, 0.06) 60%, transparent 62%);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen selection:bg-primary-container selection:text-white pb-36 relative overflow-x-hidden">
+<!-- Ambient Retro-Futuristic Radial Club Spotlights -->
+<div class="fixed top-[-10%] left-[-10%] w-[450px] h-[450px] bg-secondary-container/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<div class="fixed top-[30%] right-[-15%] w-[400px] h-[400px] bg-primary-container/15 rounded-full blur-[130px] pointer-events-none -z-10"></div>
+<div class="fixed bottom-[15%] left-[20%] w-[350px] h-[350px] bg-tertiary-container/15 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+<!-- SHARED COMPONENT: TopAppBar (Exact from JSON blueprint) -->
+<header class="bg-surface-container-lowest/90 dark:bg-surface-container-lowest/90 backdrop-blur-xl docked full-width top-0 z-40 border-b border-white/10 dark:border-white/10 shadow-[0_4px_20px_-2px_rgba(255,0,127,0.2)] sticky">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-7xl mx-auto">
+<!-- Leading section with logo & brand icon -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-white/10 shadow-[0_0_12px_rgba(255,74,141,0.35)] text-primary">
+<span class="material-symbols-outlined" data-icon="graphic_eq">graphic_eq</span>
+</div>
+<div>
+<span class="text-headline-sm font-headline-sm font-bold tracking-tight text-primary dark:text-primary drop-shadow-[0_0_8px_rgba(255,74,141,0.5)]">Discotheque</span>
+<span class="block text-[9px] uppercase tracking-widest text-on-surface-variant font-label-caps leading-none mt-0.5">Vinyl &amp; Social Club</span>
+</div>
+</div>
+<!-- Quick Search input (Mobile compact with active focus glow) -->
+<div class="hidden sm:flex items-center relative max-w-xs w-full mx-4">
+<span class="material-symbols-outlined absolute left-3 text-outline text-lg pointer-events-none" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low text-body-sm font-body-sm text-on-surface rounded-full pl-9 pr-4 py-1.5 border border-white/10 focus:border-tertiary focus:ring-1 focus:ring-tertiary outline-none transition-all placeholder:text-outline-variant" placeholder="Pesquisar faixas ou álbuns..." type="text"/>
+</div>
+<!-- Trailing section: Notifications, Online Collaborator Avatar -->
+<div class="flex items-center gap-2.5">
+<button aria-label="Notificações" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-white/5 active:scale-95">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+</button>
+<!-- Collaborator profile avatar with green online badge indicator -->
+<div class="relative group cursor-pointer" id="profileDropdownBtn">
+<div class="w-9 h-9 rounded-full overflow-hidden border border-primary/50 shadow-[0_0_10px_rgba(255,177,196,0.3)]">
+<img class="w-full h-full object-cover" data-alt="Close up cinematic portrait of DJ Leo wearing sleek chrome headphones glowing under vibrant pink and cyan neon club lights with ambient retro studio equipment in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_ea5I4o0PEW11AfojQt5NvgdmoePcdcnXkYxf6wlBCKO933J3vjCsGmz1-dGky4rdwKEkkuD4HkSD_SCBNeHy-aJRZg3B6QhcByQDfIBFKlOfCqOlkB1OgQFSq5Vu6Ndfb0NWlkXqwAyitxo5DRMUMgvfzniiFlmfQApLP8KirLTEmLPCnMabcaRinEvOVYwntxB8Dpvq_-TpiqBfklEznJt3Qs9xbCtOiPvW8NclIZz9-CP834nVTg"/>
+</div>
+<!-- Online active indicator pulse -->
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 border-2 border-surface-container-lowest rounded-full shadow-[0_0_8px_#34d399] animate-pulse"></span>
+</div>
+</div>
+</div>
+</header>
+<!-- Mobile Quick Search Field (< sm screen trigger) -->
+<div class="sm:hidden px-4 pt-3 pb-1">
+<div class="relative flex items-center w-full">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant/70 text-lg" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low/90 backdrop-blur-md text-body-sm font-body-sm text-on-surface rounded-full pl-10 pr-10 py-2 border border-white/10 focus:border-tertiary focus:shadow-[0_0_15px_rgba(0,219,233,0.3)] outline-none placeholder:text-on-surface-variant/50 transition-all" placeholder="Pesquisar músicas, artistas ou álbuns..." type="text"/>
+<button aria-label="Voz" class="absolute right-3 text-on-surface-variant/70 active:scale-90">
+<span class="material-symbols-outlined text-lg" data-icon="mic">mic</span>
+</button>
+</div>
+</div>
+<!-- MAIN APP CONTAINER -->
+<main class="max-w-7xl mx-auto px-4 pt-4 space-y-7">
+<!-- 1. STATS / COLLAB QUICK BAR (Sessões Ativas Agora) -->
+<section aria-label="Sessões Ativas" class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-container"></span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Sessões Ativas Agora</h2>
+<span class="bg-surface-container-highest text-tertiary px-2 py-0.5 rounded-full text-label-caps font-label-caps border border-tertiary/20">3 AO VIVO</span>
+</div>
+<button class="flex items-center gap-1.5 text-label-md font-label-md text-primary hover:text-primary-fixed-dim transition-colors py-1 px-2.5 rounded-full bg-primary/10 border border-primary/20 active:scale-95" onclick="toggleModal('collabCreateModal')">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="add">add</span>
+<span>Nova Sessão</span>
+</button>
+</div>
+<!-- Horizontal scrolling live rooms & quick create bar -->
+<div class="flex items-center gap-3 overflow-x-auto no-scrollbar pb-1 pt-0.5">
+<!-- Live Room 1 (Active Vinyl Listening) -->
+<div class="flex-shrink-0 flex items-center gap-3 bg-surface-container-low/80 hover:bg-surface-container/90 border border-primary/30 p-2.5 pr-4 rounded-full backdrop-blur-md cursor-pointer transition-all duration-200 shadow-[0_0_15px_rgba(255,74,141,0.2)]">
+<div class="relative w-8 h-8 rounded-full overflow-hidden border border-primary-container">
+<img class="w-full h-full object-cover" data-alt="Futuristic neon city album jacket illuminated in purple and magenta synth lines with glowing chrome typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ2CXP7eLjYO202q9qg5HZdcg9wyNFwkrwzEG3y3XkSFT8J5MwxXYZbrQZr-Iu0uSBskgBKhrRSbfyb0PXqG9E0WlG6DdcfLFO2NDjpjsYWIYVgOza4lndfpHfGiy3YiXWTFV3voDhGNhnXN9YylbkiZdtS4Wl8vc-mcF0W3E4SPaOd_AZI494NO3-LN1KBrmrIOfpQ-iNixouMSiqSCVSBwwe3edFVJwnRHWIh-0W0bIYoLfAqcYLYQ"/>
+</div>
+<div class="leading-tight">
+<div class="flex items-center gap-1.5">
+<span class="text-label-md font-label-md text-on-surface font-bold">Lounge Synthwave</span>
+<span class="bg-primary-container/20 text-primary-container text-[9px] font-bold px-1.5 py-0.2 rounded tracking-wider border border-primary-container/40">LIVE</span>
+</div>
+<p class="text-[11px] font-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary" data-icon="headphones">headphones</span> 8 sintonizados agora
+            </p>
+</div>
+</div>
+<!-- Live Room 2 -->
+<div class="flex-shrink-0 flex items-center gap-3 bg-surface-container-low/60 hover:bg-surface-container/80 border border-white/10 p-2.5 pr-4 rounded-full backdrop-blur-md cursor-pointer transition-all duration-200">
+<div class="w-8 h-8 rounded-full bg-secondary-container/40 border border-secondary flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-base" data-icon="album">album</span>
+</div>
+<div class="leading-tight">
+<div class="flex items-center gap-1.5">
+<span class="text-label-md font-label-md text-on-surface font-bold">Funk &amp; Rare Grooves</span>
+</div>
+<p class="text-[11px] font-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary" data-icon="group">group</span> 5 ouvindo com DJ Theo
+            </p>
+</div>
+</div>
+<!-- Live Room 3 -->
+<div class="flex-shrink-0 flex items-center gap-3 bg-surface-container-low/60 hover:bg-surface-container/80 border border-white/10 p-2.5 pr-4 rounded-full backdrop-blur-md cursor-pointer transition-all duration-200">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/30 border border-tertiary flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-base" data-icon="radio">radio</span>
+</div>
+<div class="leading-tight">
+<span class="text-label-md font-label-md text-on-surface font-bold">Midnight Cyber Lo-Fi</span>
+<p class="text-[11px] font-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary" data-icon="equalizer">equalizer</span> 12 ouvintes
+            </p>
+</div>
+</div>
+<!-- Add Room Ghost Button -->
+<button class="flex-shrink-0 flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-dashed border-white/20 p-2.5 px-4 rounded-full text-on-surface-variant hover:text-white transition-all text-label-md font-label-md" onclick="toggleModal('collabCreateModal')">
+<span class="material-symbols-outlined text-base" data-icon="group_add">group_add</span>
+<span>Abrir Sala de Vinil</span>
+</button>
+</div>
+</section>
+<!-- 2. MINHAS PLAYLISTS COLABORATIVAS (CAROUSEL / BENTO OVERVIEW) -->
+<section aria-label="Minhas Playlists Colaborativas" class="space-y-3.5">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Minhas Playlists Colaborativas</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Discotecas sincronizadas com amigos e comunidade</p>
+</div>
+<a class="text-label-md font-label-md text-tertiary hover:underline flex items-center" href="#todas-playlists">
+          Ver todas <span class="material-symbols-outlined text-sm ml-0.5" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Bento Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- CARD 1: Synthwave Afterhours (ACTIVE IN-FOCUS CARD) -->
+<article class="relative group bg-surface-container-low/90 rounded-2xl p-4 border-2 border-primary-container shadow-[0_8px_32px_rgba(255,0,127,0.25)] backdrop-blur-xl transition-all duration-300 hover:scale-[1.01]">
+<!-- Glow Pill Badge -->
+<div class="absolute top-4 right-4 z-10 flex items-center gap-1 bg-surface-container-lowest/90 border border-primary/40 px-2 py-0.5 rounded-full text-label-caps font-label-caps text-primary shadow-[0_0_10px_rgba(255,74,141,0.3)]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span>EM REPRODUÇÃO</span>
+</div>
+<div class="flex items-start gap-4">
+<!-- 4-Grid Album Cover Miniature -->
+<div class="relative w-20 h-20 rounded-xl overflow-hidden shadow-lg border border-white/10 flex-shrink-0 grid grid-cols-2 grid-rows-2">
+<img class="w-full h-full object-cover" data-alt="Futuristic retrowave grid sunset aesthetic album cover with brilliant purple sun and laser grids" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxyzzsqU-wvLwMBenVzn3sNuZm6bh9nu5joXnXsBcmOFirkUxHClMa9SDJ-Mw86Ti2kgmz14qX9DcLv2EP9NPlqi7FIL_lKvMAGAye1MHi1TkSCxQ5_cytWTcetY5cB4yDylJApZxTdSz-iRC75IBCA0ShfTBsiQcirMdqqwSTMj-Ag0jiuSAsuVMVjYyRfoVHcIaAeqX-1cVi_bHStk-tEPJBcU2RnvrZukHYToLPRq2T2jeRm1QtQw"/>
+<img class="w-full h-full object-cover" data-alt="Cyberpunk night highway in neo Tokyo with laser trails and neon billboards in hot pink and electric blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3nKFWOHcwGHrPSqK7-UWdUjp3zoE2DyYllXZMQ9nlnk_kz2TVPJhHmh3xF8R915aEDSq2VA8QHuiMXGa5X6yU5csx0ujK90_hFnsnXjQpUTHxyfcSTuM-ExJGd2Rrq9yOJcROrc2d5CkOL-VbGEv-QOxLxGHyZp50nQubLJys-rexRNZTn59tc63oQPW-tYUDChQYsxIuBM8NHCQkJw-JlEGvVwlE37WbSEXjyM3nBLVSI1cW9h-Uig"/>
+<img class="w-full h-full object-cover" data-alt="Retro cassette tape with glowing magenta magnetic ribbon spilling out under moody club spotlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ-IeLgWoaFptnaLkF1MeFSxsk_qPIkp-2gdA5WwTgjvhI1VGd6zWMSdkV_DW1NRa9mET1UyNrIUvQ4HOdNvgPeo1Rzj7xSA8y3lvfEdNzqyGm-QVkEeZCdk9CjUyLRPWGTNGksGXXoFuR_JSpP5MllDcNViBOUP98k2pMwwSRsgVv5cDTbOJyyUy1AvgV1UF1dpN1R625CvRim6W0FhLTGTKKz7mM3gFXe73GylIzuV1HoSt24YQvxQ"/>
+<img class="w-full h-full object-cover" data-alt="Abstract holographic vinyl record with light spectrum reflections on glossy black acrylic texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeP8vA2HxVBv4JM6dBl3ZP3YkSXn1MLaTcl5T-V9_lxkwN9wWGouv53IW_YL3DIgfcg3V6CqQWuOAKObfneTVwr5sV_NPSfmtl58Hn7dPATRM0OkjCpGSxDVHCo4ee4-6eehcoD4Oz7jZEHtUBqaaAzZnQTrYcuTUZqNN7-uXu3uRFMopdFnend9xdt4aQTcGeTsgm4ki25fA3M532EVQpfoOZko8DXJqwSFQ3_RICCcD8jcg3qanzWw"/>
+</div>
+<!-- Meta details -->
+<div class="flex-1 min-w-0 pr-8">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-primary/20 text-primary text-[10px] font-label-caps px-2 py-0.5 rounded font-bold uppercase">Dono</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">42 faixas</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white font-bold truncate">Synthwave Afterhours</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate mt-0.5">Sessão noturna retrô futurista</p>
+</div>
+</div>
+<!-- Bottom bar: Collaborator Avatars & Audio indicator -->
+<div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+<div class="flex items-center -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Profile photo of music collaborator Marina with colored hair under neon blue lights smiling at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSISpBGOu8K8Bxk_gaN4zv_5xvHwyqYz8dg0xhmFn9-Lv8lkrbfrKByV82unDfzl_oVrLcznNKGDj4md51Yz2xZU7JW90v9uvtiUohcSELE1G8I0QRSfutgCabjSXLZX0MFYwfR53ZtFHjIeaoykaum65AzFCSirszSzIQ1GVgpXPbcGU1Ur1RWc5dgzIkeO7wL5SGakQvLpRVPCP8Y2xCfW_O3IMxh2kKYaE34oHGd596LDtLAVj4SQ"/>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Profile photo of collaborator Alex wearing urban streetwear and neon reflective jacket outdoors at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx1NKt3cDcChQeEdVL11-AwGcckFCn-qWhMO0hmGbAMaPNZgq9cFGxGrRx1gCXQHZYphr-bTKq2AeSlHKlZWAt3EC-HB5rQH1qTu7ZFu_-fmbNfuoHW15mrvWXQq--sYdd6WI475axwziSQICiG_PMbxGobdVuZhJStiNlp0J_yFAhd6KgnFVDge_cBtxbAbgeB1QsMackKRwatookTinL5h-jrz7YyvQL4mE4gOkeydUPL7l52XejrA"/>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of collaborator Sofia with vintage club glasses under vibrant magenta neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBJQR0Dl5NdnGrG7bmn0bUqcgCjh-mysjzygaN1teAEk9uNGHqKhNkKWwdf9yTEAH5XiId_R-Lf7aVhyjIkuu-j_-KAFQ3EtUrEEOLiRWKSTI2Fk0VW0L8Pl7vl7ZWkO5PgVAYhufUyPudUE3R_2Pncv1UlxZkRA274eZc9LYmtSjXLMiRbldXnG1eQsQTHxF6kKLI_xOQkUu6F1HtKUi1EkDFy7ylD2doq8GBgaspGNADsItqRcpzxw"/>
+</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border-2 border-surface-container-low flex items-center justify-center text-[9px] font-bold text-on-surface-variant">
+                +3
+              </div>
+<span class="text-[11px] font-body-sm text-on-surface-variant ml-3 font-medium">6 curadores</span>
+</div>
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-lg" data-icon="radio">radio</span>
+<span class="text-label-caps font-label-caps">TOCANDO AGORA</span>
+</div>
+</div>
+</article>
+<!-- CARD 2: Disco Funk '78 Rewind -->
+<article class="relative group bg-surface-container-low/70 hover:bg-surface-container-low rounded-2xl p-4 border border-white/10 hover:border-secondary/40 shadow-lg backdrop-blur-xl transition-all duration-300">
+<div class="flex items-start gap-4">
+<!-- Vinyl Disc Peeking Cover -->
+<div class="relative w-20 h-20 rounded-xl overflow-visible flex-shrink-0">
+<div class="absolute -right-2 top-1 w-18 h-18 rounded-full bg-surface-container-lowest border border-white/20 vinyl-grooves z-0 shadow-md"></div>
+<div class="relative w-20 h-20 rounded-xl overflow-hidden border border-white/15 z-10">
+<img class="w-full h-full object-cover" data-alt="Studio 54 style retro disco vinyl jacket with gold mirror ball sparkles and 1970s warm psychedelic typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeZ6iZ3F4LLPmNC3FTCdMOEFtOUNdIhwcvwdlEOQ2sLqOKUaIERIHY6bAIfIshEtRRNA--1bQDb9wqzLeCIY4g8Onq-atGInJWPcNxTLJMT3wpj2maOZ2tIVi0q90RJlGuhKTSqESeV47kloPe_O5fBeH5CEcKPkgX6klWeEa1TtBj3f9uo_oTfglNRZLKmzNRGoNhI0qAy-J-8p0cAkTBsOpygBSjQZQMcvYgdSpY03cYlOyZHgxpfA"/>
+</div>
+</div>
+<!-- Meta details -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-secondary/20 text-secondary text-[10px] font-label-caps px-2 py-0.5 rounded font-bold uppercase">Colaborador</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">68 faixas</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white font-bold truncate">Disco Funk '78 Rewind</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate mt-0.5">Grooves clássicos &amp; rare vinyls</p>
+</div>
+</div>
+<!-- Collaborators -->
+<div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+<div class="flex items-center -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of music producer Carlos in a vintage sound recording studio with analog vinyl decks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBedqtZYCZYe9lFuEGGFzf0oCupyGRZaOXj2LNHCUPEtpowJzkCXfuvU3LQL45BUp2hBaGChZI3M7b_I986k8TrWcCuZyEb5Jdvzz7aIrnIPIny_cLiIAEFq7-xXiamy0_iypNTZRdHRT0b8N5Y-ITX2GO9M7Sig6gaM3pdo83ZgTEJyuqfUZc3E5KnSCnSzjMCJCVX1wzn2FLj_4FbgcCa9g954fjZFhrf2rh6kuY6tnDvoWgJk8lvBw"/>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of female audiophile Clara holding a vinyl record sleeve under amber ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpLr45cI7F5aECfuoB5r8JsXeaBtEw_CVzeOxilblRzTd9gezGjv1HEQzY7Pyqek4qNtqcE0I6YWE0pCOUHaOwZEz5gvlwqEWtMtw_5hx_Qs9nGLyIIW9gWd3Lzq6WdYfJ0ChjRby5jsbdr8CWDCRsixJBjFI8p2_VUYVGuGSuaxl4-IKF37LYo88uv6nPRqv5Hts_MNs2MTs_9D1U_FOw99ky9JkNnQ7owLXkOlgyZWXXIEpAeGXfaw"/>
+</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border-2 border-surface-container-low flex items-center justify-center text-[9px] font-bold text-on-surface-variant">
+                +1
+              </div>
+<span class="text-[11px] font-body-sm text-on-surface-variant ml-3 font-medium">3 curadores</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-secondary hover:bg-secondary/20 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="play_arrow">play_arrow</span>
+</button>
+</div>
+</article>
+<!-- CARD 3: Cyberpunk Midnight Drives -->
+<article class="relative group bg-surface-container-low/70 hover:bg-surface-container-low rounded-2xl p-4 border border-white/10 hover:border-tertiary/40 shadow-lg backdrop-blur-xl transition-all duration-300">
+<div class="flex items-start gap-4">
+<!-- Cover with neon grid overlay -->
+<div class="relative w-20 h-20 rounded-xl overflow-hidden border border-tertiary/30 shadow-md flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Cyberpunk night highway illuminated with intense cyan and neon pink street lamps and sports car taillights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJIiE818jIdOni_QijIjRskZJvOqw1VaC12fBayo5Tjs8rmBP1QzQxpBb54FdSOS76cEalND-22fBGGNb1vQqe_CTlNzuMW9MvdbooQNlVkZfTBynpfJcndqeGS1av1MCXZbCrDnOi-iIo9R_Ywo0SL3nTdDBUmeqW_mSqdHka4liOzwEn3ycqY-qbd7ehN88LW_DEnGsSsvCVktPMP2c_2cpNmdIPqEwtaCCkw4SnaOqjic1_nZNP7Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+<span class="material-symbols-outlined absolute bottom-1 right-1 text-tertiary text-base" data-icon="speed">speed</span>
+</div>
+<!-- Meta details -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-tertiary/20 text-tertiary text-[10px] font-label-caps px-2 py-0.5 rounded font-bold uppercase">Colaborador</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">31 faixas</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white font-bold truncate">Cyberpunk Midnight</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate mt-0.5">Dark synthwave &amp; electro wave</p>
+</div>
+</div>
+<!-- Activity indicator -->
+<div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-[11px] font-body-sm text-tertiary">
+<span class="material-symbols-outlined text-sm" data-icon="history">history</span>
+<span>Adicionado há 12 min</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-tertiary hover:bg-tertiary/20 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="play_arrow">play_arrow</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- 3. DETAILED PLAYLIST VIEW ("Synthwave Afterhours" - In Focus / Active View) -->
+<section class="bg-surface-container-low/95 rounded-3xl border border-white/10 shadow-[0_16px_48px_rgba(0,0,0,0.7)] backdrop-blur-2xl overflow-hidden">
+<!-- HERO BANNER WITH VINYL CASSETTE OVERLAY -->
+<div class="relative p-5 sm:p-8 bg-gradient-to-b from-surface-container-high/90 to-surface-container-low/95 border-b border-white/10">
+<div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+<!-- Vinyl Album Spinning Art Interactive Block -->
+<div class="relative flex items-center justify-center flex-shrink-0 group">
+<!-- Vinyl Record (Extruding & Spinning) -->
+<div class="absolute -right-6 md:-right-8 w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-[#050608] border-2 border-white/20 shadow-[0_0_25px_rgba(255,0,127,0.45)] vinyl-grooves animate-spin-slow flex items-center justify-center z-0 transition-transform duration-500" id="heroVinyl">
+<!-- Center Spindle & mini jacket sticker -->
+<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary-container border-2 border-white/40 flex flex-col items-center justify-center text-center shadow-inner">
+<span class="text-[8px] font-label-caps text-white font-bold tracking-widest leading-tight">DISCO</span>
+<span class="text-[7px] font-label-caps text-white/80">33 RPM</span>
+<div class="w-2.5 h-2.5 rounded-full bg-background border border-white/50 mt-0.5"></div>
+</div>
+</div>
+<!-- Front Album Sleeve Jacket -->
+<div class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden shadow-2xl border border-white/20 z-10 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Detailed retrowave synthwave artwork featuring neon pink grid sun rising over deep obsidian purple digital mountains with a chrome sports car in the foreground" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVY8mMYk3erk_XH01h2VKRFMOXsaVBqr-S3Aa-UquWHvgzvl5tKMhuCf6PNTVRRhIn7b2MBWX3KWGAJD_rhjy9vtAAcB_V4fe56y18doD8scl_Z041i5RXC8ESxafmnqsjUiqyxr8TjMayz5n3ZZ6emCSVkZR7AeTjGIdT3OIak97K1qKUhwBW0Mp0U4U5c0fCS8bRWzkOprIEUfVDeXzNXxlUQLONMgeY81l3iU4F4Q1Vi-ErinWJRA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/80 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-label-caps font-bold text-primary border border-white/10">
+                HQ LOSSLESS
+              </div>
+</div>
+</div>
+<!-- Playlist Identity & Details -->
+<div class="flex-1 text-center md:text-left space-y-3 z-10">
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
+<span class="bg-primary/20 text-primary border border-primary/30 text-label-caps font-label-caps px-2.5 py-0.5 rounded-full">
+                PLAYLIST PÚBLICA
+              </span>
+<span class="bg-tertiary/15 text-tertiary border border-tertiary/30 text-label-caps font-label-caps px-2.5 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> SALA SINCRONIZADA
+              </span>
+</div>
+<h1 class="text-headline-xl-mobile sm:text-headline-xl font-headline-xl font-bold tracking-tight text-white drop-shadow-[0_2px_12px_rgba(255,255,255,0.15)]">
+              Synthwave Afterhours
+            </h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl">
+              Sessão colaborativa de synths retrô e batidas noturnas dos anos 80 reinventadas. Adicione suas raridades favoritas e sintonize com a mesa.
+            </p>
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-y-1 gap-x-3 text-body-sm font-body-sm text-on-surface-variant/90 pt-1">
+<span class="font-semibold text-white">42 Faixas</span>
+<span>•</span>
+<span>2h 48m</span>
+<span>•</span>
+<span class="text-primary font-medium">Criada por você (@djleo)</span>
+<span>•</span>
+<span class="text-tertiary font-medium">6 Colaboradores</span>
+</div>
+<!-- ACTION BUTTONS CLUSTER -->
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-2.5 pt-3">
+<!-- Primary Play / Ouvir em Conjunto -->
+<button class="flex items-center gap-2 bg-gradient-to-r from-primary-container to-secondary-container hover:from-primary hover:to-secondary text-white font-label-lg px-5 py-2.5 rounded-full shadow-[0_0_20px_rgba(255,0,127,0.5)] active:scale-95 transition-all" id="togglePlayMasterBtn">
+<span class="material-symbols-outlined text-xl" data-icon="play_arrow" data-weight="fill">play_arrow</span>
+<span>Ouvir em Conjunto</span>
+</button>
+<!-- Convidar Amigo (Modal Trigger) -->
+<button class="flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high border border-white/10 hover:border-tertiary text-on-surface font-label-lg px-4 py-2.5 rounded-full transition-all active:scale-95" onclick="toggleModal('inviteModal')">
+<span class="material-symbols-outlined text-lg text-tertiary" data-icon="person_add">person_add</span>
+<span>+ Convidar Amigo</span>
+</button>
+<!-- Shuffle Button -->
+<button class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high border border-white/10 flex items-center justify-center text-on-surface hover:text-white transition-all active:scale-90" title="Ordem aleatória">
+<span class="material-symbols-outlined text-lg" data-icon="shuffle">shuffle</span>
+</button>
+<!-- Add to playlist trigger (Opens drawer/modal) -->
+<button class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high border border-white/10 flex items-center justify-center text-primary transition-all active:scale-90" onclick="toggleModal('searchDrawerModal')" title="Adicionar faixas">
+<span class="material-symbols-outlined text-lg" data-icon="add_circle">add_circle</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- COLLABORATORS AVATAR STRIP -->
+<div class="px-5 py-3 bg-surface-container-lowest/60 border-b border-white/5 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase tracking-wider">Curadores Ativos:</span>
+<div class="flex items-center -space-x-2">
+<div class="relative group cursor-pointer" title="@djleo (Você)">
+<div class="w-7 h-7 rounded-full border-2 border-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of DJ Leo wearing headphones and retro sunglasses in club neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBShCq7gG0-iYnPggtblP0eEw09ZaDA4IcaIIFYOlxvX79iyt16rSKHJUrHf1zD0Z6iItTrCySVN1eeSIKTj5ByhYiyoAmLvVcBf5-nhZmOI1HGoHDtVDldm-hJ8_zE4vavxiTeTocJFZVLu-3ylMECsbh5Kf8WkpPp113gW3JjWZ0wAEYXRAtH_1TUOElkg1LnStaFrnA0XIkXoQW8X4GhZAWGF7j5FA1YneDtAbqDQm1OJPHANdFJig"/>
+</div>
+<span class="absolute bottom-0 right-0 w-2 h-2 bg-emerald-400 rounded-full border border-background"></span>
+</div>
+<div class="relative group cursor-pointer" title="@marina">
+<div class="w-7 h-7 rounded-full border-2 border-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of music collaborator Marina smiling under neon blue ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPFFqWIEI3pkFsyG36UhCrE4jV-JXCQQ5rXaeUDGaWS3_ke6IUQrlQAaJCZ5V0PKD3dKig17SE-qn2Qmqm4-x3D2VfpoeTUMizTJcy-SpmUDOn2AIcB3_t-wsGKCP0P-tTQYZcn_MuyTk1A1UYr88TfNTpxfYmQyjOBkbNQCu1p6aSFpV3VrEG_FlN5bEFutbub8FQ6GgGAVk8N3AxBAMV7qD3RoSvLKeG4Y2LaeNCo4Nz5FKqA5ArhQ"/>
+</div>
+<span class="absolute bottom-0 right-0 w-2 h-2 bg-emerald-400 rounded-full border border-background"></span>
+</div>
+<div class="relative group cursor-pointer" title="@alex">
+<div class="w-7 h-7 rounded-full border-2 border-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of collaborator Alex wearing urban reflective jacket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZMMT2mb8w8d5aTv3u9fKm7hFTrajKFwM7FDsCN5aLq0R_3phDagmQ2E_RFJ9-j_-95Rvr7p0fsQqVarONgYsOdtzX9037jIyCBC9bxaSWMVBkiQUBS65Q9U1II6mcR0s279s9gsxd5P6DADKwUQROFHk-uP7mphVJOx2UDJjouYAVDQuYLEgLaPDiuMN9v6kvucR5-I7-QmFBqB-Cuy-gzpJovFzOr4byMJk6_UsSL0RZtS6U728CVA"/>
+</div>
+</div>
+<div class="relative group cursor-pointer" title="@sofia">
+<div class="w-7 h-7 rounded-full border-2 border-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of collaborator Sofia with vintage club glasses under vibrant magenta neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqO-erOyzjR5wTzx4OjLUVQv-Fc5CtvcJP6onmXCtz7EhYYRAsOfjpXHynmdaahmmhZug9kb4ZgSTbErdO-C7nPIBb_fpFbOn_Yi20xhNh6RzK7DLVYQY9qEJrsRDElXSz-kxIKOqLImOaK_VIf1IhPMCffUHeaf_3mI2kzdPLEFFlxomRGI_l5wCGznI1uC6wQKXsfLKAROPIcTBQqTUF7WEIunpwip7Rp3wnTqA-bLoYoL5XnQaTKQ"/>
+</div>
+</div>
+<div class="relative group cursor-pointer" title="@kai">
+<div class="w-7 h-7 rounded-full border-2 border-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Young music creator Kai in synth studio surrounded by glowing analog synthesizers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvZ8f7HbE8TvG_ONZnw_C5tY4HzJ4qZEdZ27_mwTPC4bNcFwjprZSNvHOpw4qD15aBp76df_dbfMJ312ZKOcBP6_XhxZb8DKkjB8bFFOa9FE2xIJrA5BbH4Lg-FacR6egN4RD4R9AhiUA9XT4lXzSGohO3sZrobc0RnV_l9UVf6ClEmf3Fi447cp-PIX2CAif9sSFfp1O385_b4njkcmg9Wu1HfkcoIHnG9fBjz7E-PodvDi5rqGixyA"/>
+</div>
+</div>
+</div>
+</div>
+<button class="text-body-sm font-body-sm text-tertiary hover:underline flex items-center gap-1" onclick="toggleModal('inviteModal')">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+<span>Compartilhar Link da Mesa</span>
+</button>
+</div>
+<!-- TRACKLIST TABLE / LIST -->
+<div class="p-2 sm:p-4">
+<!-- Table Column Headers (Hidden on tiny screens) -->
+<div class="hidden sm:grid grid-cols-12 gap-3 px-3 py-2 text-label-caps font-label-caps text-on-surface-variant/70 border-b border-white/5 uppercase">
+<div class="col-span-1 text-center">#</div>
+<div class="col-span-5">Título &amp; Artista</div>
+<div class="col-span-3">Álbum</div>
+<div class="col-span-2">Adicionado Por</div>
+<div class="col-span-1 text-right">Duração</div>
+</div>
+<!-- TRACK 1: Midnight City (NOW PLAYING STATE) -->
+<div class="grid grid-cols-12 gap-2 sm:gap-3 items-center px-3 py-2.5 rounded-xl bg-surface-container-high/60 border-l-4 border-primary-container my-1 transition-colors">
+<!-- Col 1: Equalizer Soundwave Indicator -->
+<div class="col-span-2 sm:col-span-1 flex items-center justify-center gap-0.5">
+<span class="w-1 bg-tertiary rounded-full eq-bar-1 h-3"></span>
+<span class="w-1 bg-primary-container rounded-full eq-bar-2 h-4"></span>
+<span class="w-1 bg-tertiary rounded-full eq-bar-3 h-2"></span>
+</div>
+<!-- Col 2: Title & Artist -->
+<div class="col-span-7 sm:col-span-5 flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 border border-white/10 shadow">
+<img class="w-full h-full object-cover" data-alt="M83 album artwork Hurry Up We're Dreaming featuring nostalgic night silhouettes and starry space atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlgdVWStiOU0JWHEGDcXlVHvtA4MMbBEhD81H_8hBvve5dQzM81ucfjzQnB6K0pXmENIPxQrNUhdb2Rg9sXdboRPV1XpOc1PkOj-CAuS1P89c2B5-5DF0baOAyYOSnKHDtmLMQJMgtxzxrB2HPgUDhTbV0ia-pxP-tcVw3dG0WTf5vpMO_GWvNtSbws1MF-LcJnQaj4ZW-693chwFXypgTdKJm_w2NA2Kpon6mI1TJyrHJfn-2Ebr9Nw"/>
+</div>
+<div class="truncate">
+<h4 class="text-body-md font-body-md font-bold text-tertiary truncate">Midnight City</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">M83</p>
+</div>
+</div>
+<!-- Col 3: Album (Hidden on small mobile) -->
+<div class="hidden sm:block sm:col-span-3 text-body-sm font-body-sm text-on-surface-variant truncate">
+            Hurry Up, We're Dreaming
+          </div>
+<!-- Col 4: Added by avatar -->
+<div class="hidden sm:flex sm:col-span-2 items-center gap-2">
+<div class="w-5 h-5 rounded-full overflow-hidden border border-primary">
+<img class="w-full h-full object-cover" data-alt="Small thumbnail of DJ Leo avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMxe6-8De8fsFGr5acylPBuMeKNzvHK7ouxw-ES4bccNaiIU_c2NNVQWV8RJH5AJDnV4uoq6CoLvNXmhftoLeKN_HJUV4oc88dA0uIMT8m-e531lymLfMC02NJL06L2J-sjgH8D4-YcLG5FIZByeYtYxA-RRQxi8_BwaY3P_yeoby2mrefI8yOhdLu63h3GHVzEuQERY-bsEpp8jKlqwEH8hw-v0KmwcC9-VdPTYFQtxsUdy9RbLUZPQ"/>
+</div>
+<span class="text-body-sm font-body-sm text-primary font-medium">Você</span>
+</div>
+<!-- Col 5: Duration & Track Actions -->
+<div class="col-span-3 sm:col-span-1 flex items-center justify-end gap-1 text-right">
+<span class="text-body-sm font-body-sm text-tertiary font-semibold mr-1">04:03</span>
+<button class="text-primary hover:text-primary-container transition-colors" title="Favorito">
+<span class="material-symbols-outlined text-lg" data-icon="favorite" data-weight="fill">favorite</span>
+</button>
+<button class="text-on-surface-variant hover:text-white transition-colors" title="Opções">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- TRACK 2: Resonance - HOME -->
+<div class="grid grid-cols-12 gap-2 sm:gap-3 items-center px-3 py-2.5 rounded-xl hover:bg-surface-container/60 my-1 transition-colors group">
+<div class="col-span-2 sm:col-span-1 flex items-center justify-center text-body-sm font-body-sm text-on-surface-variant group-hover:hidden">
+            02
+          </div>
+<!-- Play on hover -->
+<div class="col-span-2 sm:col-span-1 hidden group-hover:flex items-center justify-center">
+<button class="text-white hover:text-tertiary"><span class="material-symbols-outlined text-xl" data-icon="play_arrow">play_arrow</span></button>
+</div>
+<div class="col-span-7 sm:col-span-5 flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 border border-white/5">
+<img class="w-full h-full object-cover" data-alt="HOME Odyssey album jacket showing stylized warm geometric mountain landscape and retro sun icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeh4QcxqlY40QQp1GHbLF3twOhiBHcdTPdhGaQU_a74EhHGLo9y1907NrPzLke2cYLY8UAJCQE1KqDwst69v6Kyy2sV10VLJooudYzhQByocnItk3pI6E4EXbsGj8YP_dF0BEwhh2Yqm9WaD9LAkKnbF6gRGSMTyavFvMIEfwyLS4RbYrdbS51ZzppJgD_cY-v11CB1bn_ZA7ZluTuK3oVOsANG8Cgy18NwKNAdLveQjIT1taFpiPgmQ"/>
+</div>
+<div class="truncate">
+<h4 class="text-body-md font-body-md font-semibold text-white truncate group-hover:text-primary transition-colors">Resonance</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">HOME</p>
+</div>
+</div>
+<div class="hidden sm:block sm:col-span-3 text-body-sm font-body-sm text-on-surface-variant truncate">
+            Odyssey
+          </div>
+<div class="hidden sm:flex sm:col-span-2 items-center gap-2">
+<div class="w-5 h-5 rounded-full overflow-hidden border border-white/20">
+<img class="w-full h-full object-cover" data-alt="Collaborator Marina mini circular profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkfSHjTYida9CcjdYY8OPFxKCTjAZwWJxtw0fK5WQY_MnCdIbSC5npzZL_jmf4dFmXiEr5lJcxejGlhyA_psebO1wOjlVx7loa6DOiQmNuPYPBZFsHYACJ4NSGhM0Fr34sH7ZQxzHBFQhupBDG5__hFSiwFNwDKl3eiREH3qfNZCGqBwsnIz2zBbB_EZ2gaty2nUwAA3bI8zcrZ3h346TG9cuzrHTD1HSu1X9qVbNYPg_w9O9Mtjtu2w"/>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">@marina</span>
+</div>
+<div class="col-span-3 sm:col-span-1 flex items-center justify-end gap-1 text-right">
+<span class="text-body-sm font-body-sm text-on-surface-variant mr-1">03:32</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors" title="Favoritar">
+<span class="material-symbols-outlined text-lg" data-icon="favorite_border">favorite_border</span>
+</button>
+<button class="text-on-surface-variant hover:text-white transition-colors" title="Opções">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- TRACK 3: Nightcall - Kavinsky -->
+<div class="grid grid-cols-12 gap-2 sm:gap-3 items-center px-3 py-2.5 rounded-xl hover:bg-surface-container/60 my-1 transition-colors group">
+<div class="col-span-2 sm:col-span-1 flex items-center justify-center text-body-sm font-body-sm text-on-surface-variant group-hover:hidden">
+            03
+          </div>
+<div class="col-span-2 sm:col-span-1 hidden group-hover:flex items-center justify-center">
+<button class="text-white hover:text-tertiary"><span class="material-symbols-outlined text-xl" data-icon="play_arrow">play_arrow</span></button>
+</div>
+<div class="col-span-7 sm:col-span-5 flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 border border-white/5">
+<img class="w-full h-full object-cover" data-alt="Kavinsky Outrun album visual with crimson sports car and dark nocturnal city fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmUk1zJ2cbkQwp5gyZfq7fbew4xBbv-bejNh8COA7QXgJ-Wyzz3_JVUjmYmVJc-phwtTnPyDeNaNI-7aGKxpYiT_C6pVQWdcTwDY3yBBlhH8Z_hTWZb83ZIR8rYvjPnEyF9Y81-9qEejs15YzKuHV9FrADOTPnJZ1CbeDgE7OrZcNvvd311jwt4_bqqL7XKwU6J8QtiLhcqT3SKvsdEDGongoBVZguyEJcyjPWYXG2CSG7bj0mqIO-_w"/>
+</div>
+<div class="truncate">
+<h4 class="text-body-md font-body-md font-semibold text-white truncate group-hover:text-primary transition-colors">Nightcall</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Kavinsky</p>
+</div>
+</div>
+<div class="hidden sm:block sm:col-span-3 text-body-sm font-body-sm text-on-surface-variant truncate">
+            Outrun
+          </div>
+<div class="hidden sm:flex sm:col-span-2 items-center gap-2">
+<div class="w-5 h-5 rounded-full overflow-hidden border border-white/20">
+<img class="w-full h-full object-cover" data-alt="Collaborator Alex mini circular avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt1t4xry72NQiUX57PJovl24ZGimHUrQmLUNERmKLdBh3A9TkKc5I2RYbqR9w1Di2mekusmxkxyvbF5GQB_6cqfaC0tSO-pqxUOjN_BMCnoairTPKPnHRSYkZF9Toh80eZD36HX014DlsqyWYOHEUn67SzIYRU0eZEgX7Ov7-FLL_-Z8yuk2FqmeGGVUnnK6OUqID51vzNWmFWsyT81VesM7audcNqGZaY8LKxRSnazlfMLRlTSblglA"/>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">@alex</span>
+</div>
+<div class="col-span-3 sm:col-span-1 flex items-center justify-end gap-1 text-right">
+<span class="text-body-sm font-body-sm text-on-surface-variant mr-1">04:19</span>
+<button class="text-primary hover:text-primary-container transition-colors" title="Favoritado">
+<span class="material-symbols-outlined text-lg" data-icon="favorite" data-weight="fill">favorite</span>
+</button>
+<button class="text-on-surface-variant hover:text-white transition-colors" title="Opções">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- TRACK 4: Turbo Killer - Carpenter Brut -->
+<div class="grid grid-cols-12 gap-2 sm:gap-3 items-center px-3 py-2.5 rounded-xl hover:bg-surface-container/60 my-1 transition-colors group">
+<div class="col-span-2 sm:col-span-1 flex items-center justify-center text-body-sm font-body-sm text-on-surface-variant group-hover:hidden">
+            04
+          </div>
+<div class="col-span-2 sm:col-span-1 hidden group-hover:flex items-center justify-center">
+<button class="text-white hover:text-tertiary"><span class="material-symbols-outlined text-xl" data-icon="play_arrow">play_arrow</span></button>
+</div>
+<div class="col-span-7 sm:col-span-5 flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 border border-white/5">
+<img class="w-full h-full object-cover" data-alt="Carpenter Brut Trilogy album sleeve featuring dark occult retro thriller aesthetics and neon crucifix" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDObjN3i7YxsDwor_QL7Lr33G7TE9EfhqPHp-g4Cy4yDpeZxbTlrpX_-s0dkmyV3RUQVzj0AUrIOvPSf5q6yOY_azH5jNyr6_F4CX7kFkzvd0s4gKQcz821TxE9rFWxOeOQGqhKPxooj-35wkBiaLddLQHoUQtaoNaGGGwBFgaWUcRbBOSbkxVSAOOMhO6fGcdZuyGJB0adVDLxzA3KjXi32aQ4YSBbYWHosJkB7wSM60-XcTUcFZUGZA"/>
+</div>
+<div class="truncate">
+<h4 class="text-body-md font-body-md font-semibold text-white truncate group-hover:text-primary transition-colors">Turbo Killer</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Carpenter Brut</p>
+</div>
+</div>
+<div class="hidden sm:block sm:col-span-3 text-body-sm font-body-sm text-on-surface-variant truncate">
+            Trilogy
+          </div>
+<div class="hidden sm:flex sm:col-span-2 items-center gap-2">
+<div class="w-5 h-5 rounded-full overflow-hidden border border-white/20">
+<img class="w-full h-full object-cover" data-alt="Collaborator Sofia mini circular profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO2iqQU2gYviWMuOkZmR9z9u8-Y5665xoNnLf8vR7zmDoT09qn9SjThOTY6F_l5eIiHjKZGjcE4tC1p4jJGlrAoivyuPRrC6qNyfqr4Z6Ij-zrIP4kFMtyh6BXyZ0ztX529SuqBwxbx4U5nd1XUeo2U2Oz_VT7M5NAkiBuZEzTZPvCEKixNB6x_Ji3iL2qtijMNmTd_XRf8n_YRD1M3xwNfap4be9RO_oSOlpiGSoeyY1JKtX6r0f_Ug"/>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">@sofia</span>
+</div>
+<div class="col-span-3 sm:col-span-1 flex items-center justify-end gap-1 text-right">
+<span class="text-body-sm font-body-sm text-on-surface-variant mr-1">03:28</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors" title="Favoritar">
+<span class="material-symbols-outlined text-lg" data-icon="favorite_border">favorite_border</span>
+</button>
+<button class="text-on-surface-variant hover:text-white transition-colors" title="Opções">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- TRACK 5: Tech Noir - Gunship -->
+<div class="grid grid-cols-12 gap-2 sm:gap-3 items-center px-3 py-2.5 rounded-xl hover:bg-surface-container/60 my-1 transition-colors group">
+<div class="col-span-2 sm:col-span-1 flex items-center justify-center text-body-sm font-body-sm text-on-surface-variant group-hover:hidden">
+            05
+          </div>
+<div class="col-span-2 sm:col-span-1 hidden group-hover:flex items-center justify-center">
+<button class="text-white hover:text-tertiary"><span class="material-symbols-outlined text-xl" data-icon="play_arrow">play_arrow</span></button>
+</div>
+<div class="col-span-7 sm:col-span-5 flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 border border-white/5">
+<img class="w-full h-full object-cover" data-alt="Gunship album cover with retro 8-bit claymation cyberpunk warrior illuminated in neon magenta laser smoke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1weRbIVE1luAXKj_-pOrVSjmwuyfC9pbs4GZ-WfCYyVPQ5cPxFS27EY_AsCh66C8__ENp9Hs7Btkkq4CphO0yuXcwlBd7Wz4s-M-RJlEF3cuHIspwoiMIeu87FvgcIIOlTbV_KRP4WwGenJ2Vr8DNxwfapRNN2NLzvp71CejbEXwkR68xAQJr5c72y5Qovk0h7qntCBUmddeY_MfboCEximoGvcEvbOkrnz-Ef9DxNm-Tn9YtvDxFng"/>
+</div>
+<div class="truncate">
+<h4 class="text-body-md font-body-md font-semibold text-white truncate group-hover:text-primary transition-colors">Tech Noir</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Gunship</p>
+</div>
+</div>
+<div class="hidden sm:block sm:col-span-3 text-body-sm font-body-sm text-on-surface-variant truncate">
+            Gunship
+          </div>
+<div class="hidden sm:flex sm:col-span-2 items-center gap-2">
+<div class="w-5 h-5 rounded-full overflow-hidden border border-white/20">
+<img class="w-full h-full object-cover" data-alt="Collaborator Kai mini circular profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCWVtW05-WZmRMm50TB9BsNX8VHDOQ1q1xSN0Bz9BfqmWc7J9IkX_ucTV3R3AjPevhwSEVI8c1eD6f5PektVuCKAfEUCr4mDH7ufBtsO6q3FIQuTNRQoUb0vG4MApX15vdHECwjA7FHtR-rkZLI-z5luKht_iTSyNMiP9puhUMHwLrGtrhKNeWxIAbY5Y5LSWcXcv39fX_oYJqgLrC46nHe4v0fvE6MOfak1sNOoDoGoUiOkyxF8VwEQ"/>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">@kai</span>
+</div>
+<div class="col-span-3 sm:col-span-1 flex items-center justify-end gap-1 text-right">
+<span class="text-body-sm font-body-sm text-on-surface-variant mr-1">04:57</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors" title="Favoritar">
+<span class="material-symbols-outlined text-lg" data-icon="favorite_border">favorite_border</span>
+</button>
+<button class="text-on-surface-variant hover:text-white transition-colors" title="Opções">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Add Track Inline CTA Button -->
+<div class="p-4 bg-surface-container-lowest/50 border-t border-white/5 text-center">
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high border border-white/10 hover:border-primary text-label-md font-label-md text-on-surface hover:text-primary transition-all active:scale-95 shadow" onclick="toggleModal('searchDrawerModal')">
+<span class="material-symbols-outlined text-lg" data-icon="search">search</span>
+<span>Pesquisar e Adicionar Mais Músicas ao Vinil</span>
+</button>
+</div>
+</section>
+</main>
+<!-- ========================================================================= -->
+<!-- MODAL / DRAWER 1: SPOTIFY-STYLE "BUSCAR & ADICIONAR MÚSICAS" -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-xl flex items-end sm:items-center justify-center p-0 sm:p-4 hidden transition-opacity duration-300" id="searchDrawerModal">
+<div class="bg-surface-container-lowest border border-white/15 w-full max-w-2xl rounded-t-3xl sm:rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.9)] max-h-[795px] flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-8 duration-200">
+<!-- Drawer Header -->
+<div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-white font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="library_add">library_add</span>
+            Adicionar à Discoteca Colaborativa
+          </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Sincronizando com "Synthwave Afterhours"</p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-white" onclick="toggleModal('searchDrawerModal')">
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+</button>
+</div>
+<!-- Live Search & Filter Bar -->
+<div class="p-4 bg-surface-container-low/70 space-y-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-3 text-tertiary" data-icon="search">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-xl pl-11 pr-4 py-2.5 border border-white/10 focus:border-tertiary focus:shadow-[0_0_15px_rgba(0,219,233,0.3)] outline-none text-body-md font-body-md transition-all" id="liveSearchInput" placeholder="Nome da música, artista ou link do Spotify..." type="text" value="The Midnight"/>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar">
+<button class="px-3 py-1 rounded-full text-label-md font-label-md bg-tertiary/20 text-tertiary border border-tertiary/40">Todas</button>
+<button class="px-3 py-1 rounded-full text-label-md font-label-md bg-surface-container text-on-surface-variant hover:text-white border border-white/5">Músicas</button>
+<button class="px-3 py-1 rounded-full text-label-md font-label-md bg-surface-container text-on-surface-variant hover:text-white border border-white/5">Artistas</button>
+<button class="px-3 py-1 rounded-full text-label-md font-label-md bg-surface-container text-on-surface-variant hover:text-white border border-white/5">Álbuns em Vinil</button>
+</div>
+</div>
+<!-- Live Results List -->
+<div class="overflow-y-auto p-4 space-y-2 flex-1 divide-y divide-white/5">
+<!-- Result 1 -->
+<div class="flex items-center justify-between pt-2 pb-2 hover:bg-surface-container/40 p-2 rounded-xl transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-lg overflow-hidden border border-white/10 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="The Midnight Endless Summer album art with neon palm trees over cyber sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPW7KhCQjzywNnrQXHyrrtgQylIVpv0SROUyeRDlAi6Nwajj7kypCia_9eLyLEzODn3bcICYiwDeR3Hi0Inf2MU1G0nBMpqRd7gidlI3h8iAuYnr-wqmiu-dijS-61w0T0gGgno1CwjkHYekkq89F_P2z1cF9nF4jg17Pvqkyplhk8oseU8MAHAaaR4tGTVLQeIQl_iTOl_M8LdUZLQMHfvwaqD0P_NIfwLw42OBDQum7wiKxGqP-xpg"/>
+</div>
+<div class="truncate">
+<h5 class="text-body-md font-body-md font-bold text-white truncate">Sunset</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">The Midnight • Endless Summer (05:26)</p>
+<span class="inline-block text-[9px] font-label-caps text-tertiary bg-tertiary/10 px-1.5 py-0.2 rounded mt-0.5 border border-tertiary/20">PREVIEW DISPONÍVEL</span>
+</div>
+</div>
+<button class="flex-shrink-0 flex items-center gap-1.5 bg-primary-container hover:bg-primary text-white text-label-md font-label-md px-3.5 py-2 rounded-full shadow-[0_0_12px_rgba(255,74,141,0.4)] active:scale-95 transition-all" onclick="handleTrackAdded(this)">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="add">add</span>
+<span>Adicionar</span>
+</button>
+</div>
+<!-- Result 2 -->
+<div class="flex items-center justify-between pt-2 pb-2 hover:bg-surface-container/40 p-2 rounded-xl transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-lg overflow-hidden border border-white/10 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="The Midnight Days of Thunder neon glowing skull logo album cover in hot magenta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMeyUHKcQVrcc2ifqFQV8r2Fr2IOGlR88BvvIUzCo-I8GtRlpXI9H8tJNrrZxrY0VtVpaSzbAY4zDbK_4JQYf1aNSeL_rumf585eI7_3xDxYirI-rCFI_22FzTyFaZC0_McY_EBsJuuCnIl_EvHUjRk6IqRYibJowNUiB0CElnNGCwn9mBb4OCDs-fW3XRDcK7iC6IO4otd-h0h02-LtY2h9FMT4lkeYYyW5ZZKdXOkG0Vv2pyf4IdVA"/>
+</div>
+<div class="truncate">
+<h5 class="text-body-md font-body-md font-bold text-white truncate">Days of Thunder</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">The Midnight • Days of Thunder (04:36)</p>
+</div>
+</div>
+<button class="flex-shrink-0 flex items-center gap-1.5 bg-surface-container hover:bg-primary-container text-on-surface hover:text-white border border-white/10 text-label-md font-label-md px-3.5 py-2 rounded-full active:scale-95 transition-all" onclick="handleTrackAdded(this)">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="add">add</span>
+<span>Adicionar</span>
+</button>
+</div>
+<!-- Result 3 -->
+<div class="flex items-center justify-between pt-2 pb-2 hover:bg-surface-container/40 p-2 rounded-xl transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-lg overflow-hidden border border-white/10 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Timecop1983 Night Drive album jacket featuring retro sports car interior dash lights and city skyline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjutC8d0lTc_pBtNko2PQsz6zpnCl5qctb6YKM8WO-Xmg3jWixY2t_Yil0XzK0063gNNZcbtPKkv3rq5el7ZllvSAj1FssGY9v_bO6OSDR9yl4pJD2KCyq2abEBlubc-o1JNkS_OwNzBr7RFQfr6zpjKvPAKM4oMNgtem-N6ksBUmENNjKoJbR52Jt6aBKQlPMLuZppekyp1Ud9tnKnMU-77nAeal7aE-tww09wQ5MabllaDm_Jq8r9A"/>
+</div>
+<div class="truncate">
+<h4 class="text-body-md font-body-md font-bold text-white truncate">On the Run</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Timecop1983 • Night Drive (04:47)</p>
+</div>
+</div>
+<button class="flex-shrink-0 flex items-center gap-1.5 bg-surface-container hover:bg-primary-container text-on-surface hover:text-white border border-white/10 text-label-md font-label-md px-3.5 py-2 rounded-full active:scale-95 transition-all" onclick="handleTrackAdded(this)">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="add">add</span>
+<span>Adicionar</span>
+</button>
+</div>
+</div>
+<!-- Drawer Footer -->
+<div class="p-3.5 bg-surface-container-lowest border-t border-white/10 flex items-center justify-between">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Pronto para a pista</span>
+<button class="px-4 py-1.5 rounded-full text-label-md font-label-md bg-surface-container text-on-surface hover:text-white" onclick="toggleModal('searchDrawerModal')">
+          Fechar
+        </button>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 2: CONVIDAR AMIGO / SESSÃO COLABORATIVA -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-xl flex items-center justify-center p-4 hidden" id="inviteModal">
+<div class="bg-surface-container-low border border-primary/30 w-full max-w-md rounded-3xl p-6 shadow-[0_0_40px_rgba(255,0,127,0.3)] space-y-5 animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary/20 border border-primary text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-white font-bold">Convidar para a Discoteca</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Colaboração e sincronização em tempo real</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-white" onclick="toggleModal('inviteModal')">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Link Copy Container -->
+<div class="space-y-1.5">
+<label class="text-label-caps font-label-caps text-on-surface-variant uppercase">Link de Acesso Rápido</label>
+<div class="flex items-center gap-2 bg-surface-container-lowest p-2 rounded-xl border border-white/10">
+<input class="bg-transparent text-body-sm font-body-sm text-tertiary flex-1 outline-none px-2 select-all" readonly="" type="text" value="https://discotheque.live/room/synthwave-42"/>
+<button class="bg-tertiary text-on-tertiary font-label-md px-3 py-1.5 rounded-lg active:scale-95 transition-transform flex items-center gap-1" onclick="showToast('Link copiado com sucesso!')">
+<span class="material-symbols-outlined text-sm" data-icon="content_copy">content_copy</span>
+<span>Copiar</span>
+</button>
+</div>
+</div>
+<!-- Invite by Email / UID -->
+<div class="space-y-1.5">
+<label class="text-label-caps font-label-caps text-on-surface-variant uppercase">Convidar por E-mail ou UID do Discotheque</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-xl px-4 py-2.5 border border-white/10 focus:border-primary outline-none text-body-sm font-body-sm" placeholder="amigo@email.com ou @usuario" type="email"/>
+</div>
+</div>
+<!-- Permission Switcher -->
+<div class="bg-surface-container p-3 rounded-2xl flex items-center justify-between border border-white/5">
+<div>
+<span class="text-label-md font-label-md text-white block">Permitir adicionar músicas</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Amigo pode enfileirar vinis e faixas</span>
+</div>
+<input checked="" class="w-5 h-5 rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex justify-end gap-2 pt-2">
+<button class="px-4 py-2 rounded-full text-label-md font-label-md text-on-surface-variant hover:text-white" onclick="toggleModal('inviteModal')">Cancelar</button>
+<button class="px-5 py-2 rounded-full text-label-md font-label-md bg-primary-container hover:bg-primary text-white font-bold shadow-[0_0_15px_rgba(255,74,141,0.5)]" onclick="toggleModal('inviteModal'); showToast('Convite enviado com sucesso!')">Enviar Convite</button>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 3: CRIAR PLAYLIST COLABORATIVA -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-xl flex items-center justify-center p-4 hidden" id="collabCreateModal">
+<div class="bg-surface-container-low border border-tertiary/40 w-full max-w-md rounded-3xl p-6 shadow-[0_0_40px_rgba(0,219,233,0.3)] space-y-5">
+<div class="flex items-center justify-between">
+<h3 class="text-headline-sm font-headline-sm text-white font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" data-icon="queue_music">queue_music</span>
+          Nova Mesa Colaborativa
+        </h3>
+<button class="text-on-surface-variant hover:text-white" onclick="toggleModal('collabCreateModal')">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="space-y-4">
+<div>
+<label class="text-label-caps font-label-caps text-on-surface-variant uppercase block mb-1">Nome da Discoteca</label>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-xl px-4 py-2.5 border border-white/10 focus:border-tertiary outline-none text-body-sm font-body-sm" placeholder="Ex: Vaporwave Nights 1984" type="text"/>
+</div>
+<div>
+<label class="text-label-caps font-label-caps text-on-surface-variant uppercase block mb-1">Estilo Musical / Descrição</label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface rounded-xl px-4 py-2 border border-white/10 focus:border-tertiary outline-none text-body-sm font-body-sm" placeholder="Descreva a vibe da sala de vinil..." rows="2"></textarea>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container">
+<div>
+<span class="text-label-md font-label-md text-white block">Sessão Sincronizada (Live Room)</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Reprodução simultânea entre convidados</span>
+</div>
+<input checked="" class="w-5 h-5 rounded accent-tertiary cursor-pointer" type="checkbox"/>
+</div>
+</div>
+<div class="flex justify-end gap-2 pt-2">
+<button class="px-4 py-2 rounded-full text-label-md font-label-md text-on-surface-variant" onclick="toggleModal('collabCreateModal')">Cancelar</button>
+<button class="px-5 py-2 rounded-full text-label-md font-label-md bg-tertiary text-on-tertiary font-bold shadow-[0_0_15px_rgba(0,219,233,0.5)]" onclick="toggleModal('collabCreateModal'); showToast('Nova Discoteca criada com sucesso!')">Criar Playlist</button>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div class="fixed top-20 right-4 z-50 bg-surface-container-high border border-primary/50 text-white px-4 py-2.5 rounded-full shadow-[0_0_20px_rgba(255,74,141,0.5)] text-body-sm font-body-sm flex items-center gap-2 transform translate-y-[-100px] opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span id="toastMessage">Ação realizada!</span>
+</div>
+<!-- ========================================================================= -->
+<!-- PERSISTENT MINI PLAYER / VINYL BAR (BOTTOM FIXED DOCK) -->
+<!-- ========================================================================= -->
+<section class="fixed bottom-[60px] md:bottom-0 left-0 w-full z-40 bg-surface-container-lowest/95 backdrop-blur-2xl border-t border-white/10 shadow-[0_-8px_30px_rgba(0,0,0,0.8)] px-3 py-2.5">
+<div class="max-w-7xl mx-auto flex flex-col gap-1.5">
+<!-- Scrubber Timeline Progress Bar -->
+<div class="flex items-center gap-2 px-1">
+<span class="text-[11px] font-label-caps text-on-surface-variant w-8 text-right font-medium">1:24</span>
+<div class="flex-1 h-1 bg-surface-container-highest rounded-full overflow-hidden relative cursor-pointer group">
+<div class="h-full bg-gradient-to-r from-secondary to-tertiary w-[35%] rounded-full shadow-[0_0_10px_#00dbe9]"></div>
+</div>
+<span class="text-[11px] font-label-caps text-on-surface-variant w-8 font-medium">4:03</span>
+</div>
+<!-- Player Controls & Current Track Info -->
+<div class="flex items-center justify-between gap-2">
+<!-- Track metadata with Mini Spinning Vinyl -->
+<div class="flex items-center gap-3 min-w-0 flex-1">
+<div class="relative w-11 h-11 flex-shrink-0 cursor-pointer" onclick="togglePlayerSpin()">
+<!-- Mini extruded rotating disc -->
+<div class="w-11 h-11 rounded-full bg-[#050608] border border-white/20 vinyl-grooves animate-spin-slow flex items-center justify-center shadow-lg" id="miniVinylDisc">
+<div class="w-4 h-4 rounded-full bg-primary-container border border-white/30 flex items-center justify-center">
+<div class="w-1 h-1 rounded-full bg-background"></div>
+</div>
+</div>
+</div>
+<div class="truncate">
+<div class="flex items-center gap-1.5">
+<span class="text-body-md font-body-md font-bold text-white truncate">Midnight City</span>
+<span class="hidden sm:inline-block bg-tertiary/15 text-tertiary text-[9px] font-label-caps px-1 rounded border border-tertiary/30">HQ</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">M83 • Hurry Up, We're Dreaming</p>
+</div>
+</div>
+<!-- Social sync badge (desktop/tablet center) -->
+<div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-white/10 text-body-sm font-body-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="text-on-surface-variant">Sincronizado com <strong class="text-white">3 ouvintes</strong></span>
+</div>
+<!-- Playback Actions -->
+<div class="flex items-center gap-2">
+<!-- Favorite -->
+<button class="hidden sm:flex text-primary hover:text-primary-container p-1.5" title="Favoritar">
+<span class="material-symbols-outlined text-xl" data-icon="favorite" data-weight="fill">favorite</span>
+</button>
+<!-- Skip Previous -->
+<button class="text-on-surface hover:text-white p-1 active:scale-90 transition-transform" title="Anterior">
+<span class="material-symbols-outlined text-2xl" data-icon="skip_previous">skip_previous</span>
+</button>
+<!-- Play/Pause Toggle with Neon Glow -->
+<button class="w-10 h-10 rounded-full bg-primary-container hover:bg-primary text-white flex items-center justify-center shadow-[0_0_18px_rgba(255,74,141,0.6)] active:scale-95 transition-all" id="mainPlayPauseBtn" onclick="togglePlaybackState()" title="Reproduzir/Pausar">
+<span class="material-symbols-outlined text-2xl" data-icon="pause" data-weight="fill" id="playIconSpan">pause</span>
+</button>
+<!-- Skip Next -->
+<button class="text-on-surface hover:text-white p-1 active:scale-90 transition-transform" title="Próxima">
+<span class="material-symbols-outlined text-2xl" data-icon="skip_next">skip_next</span>
+</button>
+<!-- Queue / Discoteca List -->
+<button class="text-on-surface-variant hover:text-white p-1.5 active:scale-90" onclick="toggleModal('searchDrawerModal')" title="Adicionar à fila">
+<span class="material-symbols-outlined text-xl" data-icon="queue_music">queue_music</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT: BottomNavBar (Responsive: Mobile md:hidden) -->
+<!-- Exact execution from JSON blueprint: Labels ["Home", "Playlists", "Collab", "Search", "Profile"] -->
+<!-- Active state assigned to "Playlists" (Current detailed collaborative screen) -->
+<!-- ========================================================================= -->
+<nav class="md:hidden bg-surface-container-lowest/95 dark:bg-surface-container-lowest/95 backdrop-blur-2xl docked full-width bottom-0 z-50 border-t border-white/10 dark:border-white/10 shadow-[0_-8px_32px_rgba(0,0,0,0.8)] fixed bottom-0 left-0 w-full flex justify-around items-center px-3 py-2 pb-safe">
+<!-- Tab 1: Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-on-surface-variant/70 hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150 active:scale-90 transition-transform duration-150" href="#home">
+<span class="material-symbols-outlined text-xl" data-icon="home">home</span>
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-[10px] mt-0.5">Home</span>
+</a>
+<!-- Tab 2: Playlists (ACTIVE NAVIGATION TARGET FOR THIS SCREEN) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary font-bold relative after:content-[''] after:w-1 after:h-1 after:bg-primary after:rounded-full after:mt-1 after:shadow-[0_0_8px_#ff4a8d] active:scale-90 transition-transform duration-150" href="#playlists">
+<span class="material-symbols-outlined text-xl" data-icon="library_music" data-weight="fill">library_music</span>
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-[10px] mt-0.5">Playlists</span>
+</a>
+<!-- Tab 3: Collab (Inactive with live pill) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-on-surface-variant/70 hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150 active:scale-90 transition-transform duration-150 relative" href="#collab">
+<div class="relative">
+<span class="material-symbols-outlined text-xl" data-icon="groups">groups</span>
+<span class="absolute -top-1 -right-1.5 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_#ff4a8d]"></span>
+</div>
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-[10px] mt-0.5">Collab</span>
+</a>
+<!-- Tab 4: Search (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-on-surface-variant/70 hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150 active:scale-90 transition-transform duration-150" href="#search" onclick="toggleModal('searchDrawerModal')">
+<span class="material-symbols-outlined text-xl" data-icon="search">search</span>
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-[10px] mt-0.5">Search</span>
+</a>
+<!-- Tab 5: Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-on-surface-variant/70 hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150 active:scale-90 transition-transform duration-150" href="#profile">
+<span class="material-symbols-outlined text-xl" data-icon="person">person</span>
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-[10px] mt-0.5">Profile</span>
+</a>
+</nav>
+<!-- INTERACTIVE VANILLA JAVASCRIPT LOGIC -->
+<script>
+    let isPlaying = true;
+
+    // Toggle Modal Utility
+    function toggleModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.toggle('hidden');
+      }
+    }
+
+    // Playback state controller for vinyl rotation & button state
+    function togglePlaybackState() {
+      isPlaying = !isPlaying;
+      const playIcon = document.getElementById('playIconSpan');
+      const heroVinyl = document.getElementById('heroVinyl');
+      const miniVinyl = document.getElementById('miniVinylDisc');
+
+      if (isPlaying) {
+        playIcon.textContent = 'pause';
+        playIcon.setAttribute('data-icon', 'pause');
+        heroVinyl?.classList.remove('paused-animation');
+        miniVinyl?.classList.remove('paused-animation');
+        showToast('Reprodução retomada na mesa.');
+      } else {
+        playIcon.textContent = 'play_arrow';
+        playIcon.setAttribute('data-icon', 'play_arrow');
+        heroVinyl?.classList.add('paused-animation');
+        miniVinyl?.classList.add('paused-animation');
+        showToast('Reprodução pausada.');
+      }
+    }
+
+    // Master Hero button trigger
+    const togglePlayMaster = document.getElementById('togglePlayMasterBtn');
+    if (togglePlayMaster) {
+      togglePlayMaster.addEventListener('click', () => {
+        togglePlaybackState();
+      });
+    }
+
+    function togglePlayerSpin() {
+      togglePlaybackState();
+    }
+
+    // Add track simulation
+    function handleTrackAdded(btnElement) {
+      btnElement.innerHTML = `<span class="material-symbols-outlined text-sm font-bold">check</span> Adicionado!`;
+      btnElement.classList.remove('bg-primary-container', 'hover:bg-primary');
+      btnElement.classList.add('bg-tertiary-container', 'text-white');
+      showToast('Faixa adicionada ao vinil colaborativo!');
+      
+      setTimeout(() => {
+        toggleModal('searchDrawerModal');
+      }, 700);
+    }
+
+    // Toast banner
+    function showToast(message) {
+      const toast = document.getElementById('toastNotification');
+      const msgElem = document.getElementById('toastMessage');
+      if (toast && msgElem) {
+        msgElem.textContent = message;
+        toast.classList.remove('translate-y-[-100px]', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+
+        setTimeout(() => {
+          toast.classList.add('translate-y-[-100px]', 'opacity-0');
+          toast.classList.remove('translate-y-0', 'opacity-100');
+        }, 3000);
+      }
+    }
+
+    // Profile dropdown trigger feedback
+    document.getElementById('profileDropdownBtn')?.addEventListener('click', () => {
+      showToast('Perfil de DJ Leo: 14 playlists criadas • 88 seguidores');
+    });
+  </script>
+</body></html>
